@@ -1,10 +1,10 @@
-//your JS code here. If required.
-let line=document.querySelector("#line");
-let angle=0;
-function rotate() {
-	angle+=1;
-	if(angle==360)
-		angle=0;
-	line.style.transform=`rotate(${angle}deg)`
+// //your JS code here. If required.
+let line = document.querySelector("#line");
+let rotate=0;
+
+function fn() {
+	rotate+=1;
+	line.style.transform = `rotate(${rotate}deg)`;
+	requestAnimationFrame(fn);
 }
-setInterval(rotate,0);
+fn()
